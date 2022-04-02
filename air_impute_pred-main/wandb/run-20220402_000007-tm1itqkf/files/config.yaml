@@ -1,0 +1,218 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.10.32
+    framework: lightning
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3
+    - 1: train_loss_epoch
+      5: 1
+      6:
+      - 1
+    - 1: epoch
+      5: 1
+      6:
+      - 1
+    - 1: val_loss
+      5: 1
+      6:
+      - 1
+    - 1: test_loss
+      5: 1
+      6:
+      - 1
+    - 1: rmse
+      5: 1
+      6:
+      - 1
+    python_version: 3.8.3
+    t:
+      1:
+      - 1
+      - 3
+      - 5
+      - 9
+      2:
+      - 1
+      - 3
+      - 5
+      - 9
+      3:
+      - 1
+      - 2
+      - 7
+      4: 3.8.3
+      5: 0.10.32
+      8:
+      - 5
+batch_size:
+  desc: null
+  value: 128
+c_weight:
+  desc: null
+  value: 1.3
+cheb_norm:
+  desc: null
+  value: rw
+config:
+  desc: null
+  value: config/conf.yaml
+dec_len:
+  desc: null
+  value: 24
+early_stop:
+  desc: null
+  value: 50
+enc_len:
+  desc: null
+  value: 8
+epoch:
+  desc: null
+  value: 1
+gnn-out-dim:
+  desc: null
+  value: 64
+gnn_out_dim:
+  desc: null
+  value: 64
+gpu-id:
+  desc: null
+  value: 0
+gpu_id:
+  desc: null
+  value: 0
+group_name:
+  desc: null
+  value: group_trash
+hid_dim:
+  desc: null
+  value: 16
+interval-set:
+  desc: null
+  value:
+  - 1
+  - 4
+  - 8
+interval_set:
+  desc: null
+  value:
+  - 1
+  - 4
+  - 8
+k-hop:
+  desc: null
+  value: 1
+k_hop:
+  desc: null
+  value: 1
+log_dir:
+  desc: null
+  value: /home/wangshuo/tokaka_hyx/Air_GNN/Data/knn-data/results/20220402_000014/MT_GC_GRU_0
+lr:
+  desc: null
+  value: 0.0001
+model-use:
+  desc: null
+  value: MT_GC_GRU
+model_use:
+  desc: null
+  value: MT_GC_GRU
+mt-hid-dim:
+  desc: null
+  value: 64
+mt_hid_dim:
+  desc: null
+  value: 64
+param/batch_size:
+  desc: null
+  value: 128
+param/c_weight:
+  desc: null
+  value: 1.3
+param/cheb_norm:
+  desc: null
+  value: rw
+param/dec_len:
+  desc: null
+  value: 24
+param/early_stop:
+  desc: null
+  value: 50
+param/enc_len:
+  desc: null
+  value: 8
+param/epoch:
+  desc: null
+  value: 1
+param/gnn_out_dim:
+  desc: null
+  value: 64
+param/hid_dim:
+  desc: null
+  value: 64
+param/interval_set:
+  desc: null
+  value:
+  - 1
+  - 4
+  - 8
+param/k_hop:
+  desc: null
+  value: 1
+param/lr:
+  desc: null
+  value: 0.0001
+param/model_use:
+  desc: null
+  value: MT_GC_GRU
+param/mt_hid_dim:
+  desc: null
+  value: 64
+param/num_workers:
+  desc: null
+  value: 4
+param/orth_flag:
+  desc: null
+  value: false
+param/precision:
+  desc: null
+  value: 32
+param/preiod_select:
+  desc: null
+  value: p5
+param/seed:
+  desc: null
+  value: 0
+param/time_interval:
+  desc: null
+  value: 3
+param/wd:
+  desc: null
+  value: 0.0001
+preiod_select:
+  desc: null
+  value: p5
+project_name:
+  desc: null
+  value: air_trash
+run_idx:
+  desc: null
+  value: 0
+seed:
+  desc: null
+  value: 0
+time_interval:
+  desc: null
+  value: 3
+wandb_logger:
+  desc: null
+  value: <pytorch_lightning.loggers.wandb.WandbLogger object at 0x7fdcbc08b550>
+wd:
+  desc: null
+  value: 0.0001

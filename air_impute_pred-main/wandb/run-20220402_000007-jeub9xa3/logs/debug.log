@@ -1,0 +1,28 @@
+2022-04-02 00:00:07,752 INFO    MainThread:62311 [wandb_setup.py:_flush():69] setting env: {'entity': 'tokaka', 'project': 'air_sweep_test', 'sweep_id': 'uf3qgaif', 'root_dir': '/home/wangshuo/tokaka_hyx/Air_GNN/Code/air_impute_pred-main-v5/air_impute_pred-main-v5', 'run_id': 'jeub9xa3', 'sweep_param_path': '/home/wangshuo/tokaka_hyx/Air_GNN/Code/air_impute_pred-main-v5/air_impute_pred-main-v5/wandb/sweep-uf3qgaif/config-jeub9xa3.yaml'}
+2022-04-02 00:00:07,752 INFO    MainThread:62311 [wandb_setup.py:_flush():69] setting login settings: {}
+2022-04-02 00:00:07,752 INFO    MainThread:62311 [wandb_init.py:_log_setup():337] Logging user logs to /home/wangshuo/tokaka_hyx/Air_GNN/Code/air_impute_pred-main-v5/air_impute_pred-main-v5/wandb/run-20220402_000007-jeub9xa3/logs/debug.log
+2022-04-02 00:00:07,752 INFO    MainThread:62311 [wandb_init.py:_log_setup():338] Logging internal logs to /home/wangshuo/tokaka_hyx/Air_GNN/Code/air_impute_pred-main-v5/air_impute_pred-main-v5/wandb/run-20220402_000007-jeub9xa3/logs/debug-internal.log
+2022-04-02 00:00:07,752 INFO    MainThread:62311 [wandb_init.py:init():370] calling init triggers
+2022-04-02 00:00:07,753 INFO    MainThread:62311 [wandb_init.py:init():375] wandb.init called with sweep_config: {'gnn-out-dim': 64, 'gpu-id': 0, 'interval-set': [1, 4, 8], 'k-hop': 1, 'lr': 0.0001, 'model-use': 'MT_GC_GRU', 'mt-hid-dim': 96}
+config: {'config': 'config/conf.yaml', 'gpu_id': 0, 'project_name': 'air_trash', 'group_name': 'group_trash', 'run_idx': 0, 'model_use': 'MT_GC_GRU', 'preiod_select': 'p5', 'seed': 0, 'enc_len': 8, 'dec_len': 24, 'epoch': 1, 'early_stop': 50, 'batch_size': 128, 'wd': 0.0001, 'lr': 0.0001, 'hid_dim': 16, 'mt_hid_dim': 96, 'gnn_out_dim': 64, 'c_weight': 1.3, 'k_hop': 1, 'time_interval': 3, 'cheb_norm': 'rw', 'interval_set': [1, 4, 8]}
+2022-04-02 00:00:07,753 INFO    MainThread:62311 [wandb_init.py:init():419] starting backend
+2022-04-02 00:00:07,753 INFO    MainThread:62311 [backend.py:_multiprocessing_setup():70] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-04-02 00:00:07,779 INFO    MainThread:62311 [backend.py:ensure_launched():135] starting backend process...
+2022-04-02 00:00:07,800 INFO    MainThread:62311 [backend.py:ensure_launched():139] started backend process with pid: 62657
+2022-04-02 00:00:07,802 INFO    MainThread:62311 [wandb_init.py:init():424] backend started and connected
+2022-04-02 00:00:07,803 INFO    MainThread:62311 [wandb_run.py:_config_callback():873] config_cb None None {'gnn-out-dim': 64, 'gpu-id': 0, 'interval-set': [1, 4, 8], 'k-hop': 1, 'lr': 0.0001, 'model-use': 'MT_GC_GRU', 'mt-hid-dim': 96}
+2022-04-02 00:00:07,804 INFO    MainThread:62311 [wandb_init.py:init():472] updated telemetry
+2022-04-02 00:00:07,805 INFO    MainThread:62311 [wandb_init.py:init():491] communicating current version
+2022-04-02 00:00:08,670 INFO    MainThread:62311 [wandb_init.py:init():496] got version response upgrade_message: "wandb version 0.12.11 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-04-02 00:00:08,670 INFO    MainThread:62311 [wandb_init.py:init():504] communicating run to backend with 30 second timeout
+2022-04-02 00:00:09,419 INFO    MainThread:62311 [wandb_init.py:init():529] starting run threads in backend
+2022-04-02 00:00:14,428 INFO    MainThread:62311 [wandb_run.py:_console_start():1624] atexit reg
+2022-04-02 00:00:14,429 INFO    MainThread:62311 [wandb_run.py:_redirect():1498] redirect: SettingsConsole.REDIRECT
+2022-04-02 00:00:14,430 INFO    MainThread:62311 [wandb_run.py:_redirect():1503] Redirecting console.
+2022-04-02 00:00:14,434 INFO    MainThread:62311 [wandb_run.py:_redirect():1559] Redirects installed.
+2022-04-02 00:00:14,434 INFO    MainThread:62311 [wandb_init.py:init():554] run started, returning control to user process
+2022-04-02 00:00:25,621 INFO    MainThread:62311 [wandb_watch.py:watch():40] Watching
+2022-04-02 00:00:25,630 INFO    MainThread:62311 [wandb_run.py:_config_callback():873] config_cb None None {'log_dir': '/home/wangshuo/tokaka_hyx/Air_GNN/Data/knn-data/results/20220402_000014/MT_GC_GRU_0', 'wandb_logger': '<pytorch_lightning.loggers.wandb.WandbLogger object at 0x7fb9601463a0>', 'param/preiod_select': 'p5', 'param/time_interval': 3, 'param/model_use': 'MT_GC_GRU', 'param/seed': 0, 'param/epoch': 1, 'param/num_workers': 4, 'param/early_stop': 50, 'param/batch_size': 128, 'param/precision': 32, 'param/interval_set': [1, 4, 8], 'param/c_weight': 1.3, 'param/wd': 0.0001, 'param/hid_dim': 96, 'param/gnn_out_dim': 64, 'param/orth_flag': False, 'param/enc_len': 8, 'param/dec_len': 24, 'param/lr': 0.0001, 'param/mt_hid_dim': 96, 'param/k_hop': 1, 'param/cheb_norm': 'rw', 'gpu_id': 0}
+2022-04-02 00:00:34,935 INFO    MainThread:62311 [wandb_run.py:_config_callback():873] config_cb None None {'log_dir': '/home/wangshuo/tokaka_hyx/Air_GNN/Data/knn-data/results/20220402_000014/MT_GC_GRU_0', 'wandb_logger': '<pytorch_lightning.loggers.wandb.WandbLogger object at 0x7fb96013cfd0>', 'param/preiod_select': 'p5', 'param/time_interval': 3, 'param/model_use': 'MT_GC_GRU', 'param/seed': 0, 'param/epoch': 1, 'param/num_workers': 4, 'param/early_stop': 50, 'param/batch_size': 128, 'param/precision': 32, 'param/interval_set': [1, 4, 8], 'param/c_weight': 1.3, 'param/wd': 0.0001, 'param/hid_dim': 96, 'param/gnn_out_dim': 64, 'param/orth_flag': False, 'param/enc_len': 8, 'param/dec_len': 24, 'param/lr': 0.0001, 'param/mt_hid_dim': 96, 'param/k_hop': 1, 'param/cheb_norm': 'rw', 'gpu_id': 0}
+2022-04-02 00:00:37,152 INFO    MainThread:62311 [wandb_run.py:finish():1294] finishing run tokaka/air_sweep_test/jeub9xa3

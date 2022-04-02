@@ -1,0 +1,29 @@
+
+Global seed set to 0
+Parse config: /home/wangshuo/tokaka_hyx/Air_GNN/Code/air_impute_pred-main-v5/air_impute_pred-main-v5/config/conf.yaml
+self.gpu_id: 0
+Validation sanity check:   0% 0/2 [00:00<?, ?it/s]
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+  | Name             | Type            | Params
+-----------------------------------------------------
+0 | model            | MT_GC_GRU       | 27.8 K
+1 | criterion        | MSELoss         | 0
+2 | metric_lightning | LightningMetric | 0
+-----------------------------------------------------
+27.8 K    Trainable params
+0         Non-trainable params
+27.8 K    Total params
+
+Epoch 0:   0% 0/14 [00:00<?, ?it/s]
+/home/wangshuo/tools/ENTER/envs/tokaka/lib/python3.8/site-packages/torch/nn/functional.py:1709: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+
+Epoch 0:  64% 9/14 [00:04<00:02,  2.11it/s, loss=1.17, v_num=tqkf, val_loss=0.990, train_loss_step=1.070]
+
+Testing:  14% 1/7 [00:00<00:03,  1.75it/s]
+Testing: 100% 7/7 [00:01<00:00,  4.83it/s]
+Save: /home/wangshuo/tokaka_hyx/Air_GNN/Data/knn-data/results/20220402_000014/MT_GC_GRU_0
+['PM2.5', 'blh', 'sp', 't2m', 'rh2m', 'tp', 'u100', 'v100', 'd2m']
+Testing: 100% 7/7 [00:01<00:00,  3.71it/s]

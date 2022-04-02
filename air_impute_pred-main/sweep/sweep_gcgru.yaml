@@ -1,0 +1,64 @@
+program: train.py
+method: grid
+metric:
+  name: test_loss
+  goal: minimize
+project: 'air_sweep_14_all'
+parameters:
+  # batch_size: [32, 64]
+  lr: 
+    values: [0.001, 0.0001, 0.00001]
+  wd: 
+    values: [0.01, 0.001, 0.0001, 0.00001]
+  # c-weight: 
+  #   values: [1, 2, 3]
+  # hid-dim: 
+  #   values: [16, 32, 64, 128]
+  seed: 
+    values:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+  mt-hid-dim: 
+    values:
+    - 16
+    - 32
+    - 64
+    - 128
+  hid-dim: 
+    values:
+    - 16
+    - 32
+    - 64
+    - 128
+  gnn-out-dim: 
+    values: [16, 32, 64, 128, 256]
+  # seed: [0, 1, 2, 3, 4]
+  # config: 'config/conf.yaml'
+  # enc_len: 8
+  # dec_len: 24
+  gpu-id: 
+    values: [0]
+  interval-set: 
+    values: 
+    # - [1, 2]
+    # - [1, 8]
+    - [1, 4] 
+    # - [1 ,2 ,4]
+    - [1 ,4 ,8]
+    # - [1 ,2 ,8]
+    - [1, 2, 4, 8]
+  model-use: 
+    values: 
+    - 'GC_GRU'
+    - 'MT_GC_GRU'
+    - 'City_GC_GRU'
+    - 'MTCity_GC_GRU'
+    - 'PM25GNN'
+    - 'HighAirv2'
+
+  k-hop: 
+    values: [1]
+  # run_idx: 0

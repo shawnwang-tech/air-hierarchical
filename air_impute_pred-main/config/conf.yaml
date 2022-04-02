@@ -1,0 +1,127 @@
+filepath:
+  root_dir: /home/wangshuo/tokaka_hyx/Air_GNN/Data/knn-data
+
+info:
+  log_filename:
+    single_variable
+  summary_wandb:
+    测试
+
+hyperparameter:
+  # gpu_id: 14
+  experiments:
+    model_use:
+#    model_use: MSTGCN
+#    model_use: ASTGCN
+#    model_use: GWNet
+#    model_use: STGCN
+#    model_use: DCRNN
+#    model_use: GRU
+#    model_use: GC_GRU
+#    model_use: MT_GC_GRU 
+#    model_use: City_GC_GRU 
+#    model_use: City_GC_GRUv2 
+#    model_use: City_GC_GRUv3
+#    model_use: MTCity_GC_GRUv2
+#    model_use: MTCity_GC_GRU 
+#    model_use: PM25GNN
+#    model_use: MTMSGNN
+#    model_use: CityGNN
+#    model_use: HighAirv2
+#    model_use: MTCityGNN
+#    model_use: MTCityGNNv2
+#    model_use: MTClusterGNN
+#    model_use: HighAir
+
+  city_data_use_flag: 
+
+  data:
+    air_var:
+      [
+        'PM2.5',
+#        'PM10',
+#        'O3',
+#        'NO2',
+      ]
+
+    # use_met: True
+    # use_time: True
+
+    use_met: True
+    use_time: False
+
+    # use_met: False
+    # use_time: False
+
+    period:
+
+      # all: ['2016-1-1 00:00:00', '2020-1-1 00:00:00']
+
+      p1:
+        train: ['2015-11-1 00:00:00', '2016-3-1 00:00:00']
+        val: ['2016-11-1 00:00:00', '2017-3-1 00:00:00']
+        test: ['2017-11-1 00:00:00', '2018-3-1 00:00:00']
+
+      p2:
+        train: [ '2015-5-1 00:00:00', '2015-9-1 00:00:00' ]
+        val: [ '2016-5-1 00:00:00', '2016-9-1 00:00:00' ]
+        test: [ '2017-5-1 00:00:00', '2017-9-1 00:00:00' ]
+
+      p3:
+        train: [ '2015-1-1 00:00:00', '2016-12-31 23:00:00' ]
+        val: [ '2017-1-1 00:00:00', '2017-12-31 23:00:00' ]
+        test: [ '2018-1-1 00:00:00', '2018-12-31 23:00:00' ]
+      
+      p4:
+        train: ['2016-11-1 00:00:00', '2017-3-1 00:00:00']
+        val: ['2017-11-1 00:00:00', '2018-3-1 00:00:00']
+        test: ['2018-11-1 00:00:00', '2019-3-1 00:00:00']
+
+      p5:
+        train: ['2018-11-1 00:00:00', '2019-3-1 00:00:00']
+        val: ['2019-11-1 00:00:00', '2020-3-1 00:00:00']
+        test: ['2020-11-1 00:00:00', '2021-3-1 00:00:00']
+
+      p6:
+        train: [ '2017-1-1 00:00:00', '2018-12-31 23:00:00' ]
+        val: [ '2018-1-1 00:00:00', '2019-12-31 23:00:00' ]
+        test: [ '2019-1-1 00:00:00', '2020-12-31 23:00:00' ]
+
+    t_var:
+      [ 'dow',
+        'hour'
+      ]
+    met_var:
+      [ 'blh',
+        # 'spd100',
+        # 'dir100',
+        'sp',
+        't2m',
+        'rh2m',
+        'tp',
+        # 'msdwswrf',
+        'u100',
+        'v100',
+        'd2m',
+      ]
+
+  train:
+    preiod_select: 
+    time_interval: 
+    model_use:
+    seed: 
+    epoch: 
+    num_workers: 4
+    early_stop: 
+    batch_size: 
+    # lr: 0.0005
+    precision: 32
+    interval_set:
+    # k_hop: 
+    c_weight: 
+    wd: 
+    hid_dim:
+    gnn_out_dim:
+    orth_flag: False
+
+

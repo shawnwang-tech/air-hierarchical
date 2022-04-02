@@ -1,0 +1,114 @@
+filepath:
+  root_dir: /home/wangshuo/tokaka_hyx/Air_GNN/Data/knn-data
+#  tikgpu07:
+#    shuowang:
+#      root_dir: /itet-stor/shuowang/net_scratch/data/air/imputation
+#  tikgpu01:
+#    shuowang:
+#      root_dir: /itet-stor/shuowang/net_scratch/data/air/imputation
+
+info:
+  log_filename:
+    single_variable
+  summary_wandb:
+    测试
+
+hyperparameter:
+  experiments:
+
+#    model_use: MSTGCN
+#    model_use: ASTGCN
+#    model_use: GWNet
+#    model_use: STGCN
+#    model_use: DCRNN
+#    model_use: GRU
+#    model_use: PM25GNN
+#    model_use: MTMSGNN
+#    model_use: CityGNN
+#    model_use: MSGNN
+#    model_use: MTGNN
+#    model_use: MTCityGNN
+    model_use: MTClusterGNN
+
+  city_data_use_flag: True
+
+  data:
+    air_var:
+      [
+        'PM2.5',
+#        'PM10',
+#        'O3',
+#        'NO2',
+      ]
+
+    # use_met: True
+    # use_time: True
+
+    use_met: True
+    use_time: False
+
+    # use_met: False
+    # use_time: False
+
+    period:
+      # all: ['2016-1-1 00:00:00', '2020-1-1 00:00:00']
+
+      train: ['2015-11-1 00:00:00', '2016-3-1 00:00:00']
+      val: ['2016-11-1 00:00:00', '2017-3-1 00:00:00']
+      test: ['2017-11-1 00:00:00', '2018-3-1 00:00:00']
+
+      # train: [ '2015-5-1 00:00:00', '2015-9-1 00:00:00' ]
+      # val: [ '2016-5-1 00:00:00', '2016-9-1 00:00:00' ]
+      # test: [ '2017-5-1 00:00:00', '2017-9-1 00:00:00' ]
+
+      # train: [ '2015-1-1 00:00:00', '2016-12-31 23:00:00' ]
+      # val: [ '2017-1-1 00:00:00', '2017-12-31 23:00:00' ]
+      # test: [ '2018-1-1 00:00:00', '2018-12-31 23:00:00' ]
+
+    enc_len: 24
+    dec_len: 72
+
+    t_var:
+      [ 'dow',
+        'hour'
+      ]
+    met_var:
+      [ 'blh',
+        'spd100',
+        'dir100',
+        'sp',
+        't2m',
+        'rh2m',
+        'tp',
+        'msdwswrf',
+        'u100',
+        'v100',
+        'd2m',
+      ]
+
+  train:
+    seed: 0
+    epoch: 300
+    batch_size: 32
+    lr: 0.001
+    precision: 32
+    interval_set: [1, 2, 4, 8, 16, 24]
+    k_hop: 1
+    c_weight: 2
+
+  model:
+    GRU:
+      hid_dim: 64
+    PM25GNN:
+      hid_dim: 64
+    MTMSGNN:
+      hid_dim: 96
+    MSGNN:
+      hid_dim: 64
+    MTClusterGNN:
+      hid_dim: 96
+      num_cluster: 6
+    MTCityGNN:
+      hid_dim: 64
+    CityGNN:
+      hid_dim: 64
